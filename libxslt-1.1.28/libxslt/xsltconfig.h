@@ -41,7 +41,7 @@ extern "C" {
  *
  * extra version information, used to show a CVS compilation
  */
-#define	LIBXSLT_VERSION_EXTRA "-GITv1.1.27-16-g9382efe"
+#define	LIBXSLT_VERSION_EXTRA ""
 
 /**
  * WITH_XSLT_DEBUG:
@@ -116,11 +116,11 @@ extern "C" {
  * Whether module support is configured into libxslt
  * Note: no default module path for win32 platforms
  */
-#if 1
+#if 0
 #ifndef WITH_MODULES
 #define WITH_MODULES
 #endif
-#define LIBXSLT_DEFAULT_PLUGINS_PATH() "/usr/lib/libxslt-plugins"
+#define LIBXSLT_DEFAULT_PLUGINS_PATH() "NULL"
 #endif
 
 /**
@@ -130,7 +130,7 @@ extern "C" {
 #ifndef XSLT_LOCALE_XLOCALE
 #define XSLT_LOCALE_XLOCALE
 #endif
-#elif 0
+#elif 1
 #ifndef XSLT_LOCALE_WINAPI
 #define XSLT_LOCALE_WINAPI
 #endif

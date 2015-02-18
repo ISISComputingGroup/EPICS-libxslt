@@ -25,7 +25,7 @@ include $(TOP)/configure/RULES
 
 ifdef T_A
 install:
-	$(MAKE) -C $(TOP)/libxslt-1.1.28/win32 -f Makefile.epics install T_A=$(T_A) CDEBUG=$(CDEBUG) CRUNTIME="$(CRUNTIME)" USE_ZLIB=$(USE_ZLIB) TOP=$(LIBXML2)
+	$(MAKE) -C $(TOP)/libxslt-1.1.28/win32 -f Makefile.epics install T_A=$(T_A) CDEBUG=$(CDEBUG) CRUNTIME="$(CRUNTIME)" USE_ZLIB=$(USE_ZLIB) TOP=$(LIBXSLT)
 endif
 
 clean::

@@ -1,0 +1,29 @@
+#
+# This is called from $(TOP)/libsxltApp/src/Makefile with various parameters being passed
+#
+TOP=../..
+
+include $(TOP)/configure/CONFIG
+
+include $(TOP)/configure/RULES
+
+# top in windows style paths
+NTOP = $(subst /,\,$(TOP))
+
+install:
+ifdef T_A
+	cscript configure.js compiler=msvc prefix=$(NTOP) \
+		include=$(subst /,\,$(LIBXML2))\include\libxml2;$(subst /,\,$(LIBICONV))\include;$(subst /,\,$(ZLIB))\include;$(subst /,\,$(EPICS_BASE))\include \
+		lib=$(subst /,\,$(LIBXML2))\lib\$(EPICS_HOST_ARCH);$(subst /,\,$(LIBICONV))\lib\$(EPICS_HOST_ARCH);$(subst /,\,$(ZLIB))\lib\$(EPICS_HOST_ARCH) \
+		debug=$(CDEBUG) zlib=$(USE_ZLIB) cruntime="$(CRUNTIME)" bindir=$(NTOP)\bin\$(EPICS_HOST_ARCH) \
+		incdir=$(NTOP)\include libdir=$(NTOP)\lib\$(EPICS_HOST_ARCH) sodir=$(NTOP)\bin\$(EPICS_HOST_ARCH)
+	run_nmake.bat /f Makefile.msvc
+	run_nmake.bat /f Makefile.msvc install
+endif
+
+clean::
+	run_nmake.bat /f Makefile.msvc clean
+	$(RM) Makefile
+
+uninstall:
+

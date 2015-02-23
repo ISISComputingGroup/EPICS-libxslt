@@ -22,7 +22,9 @@ ifdef T_A
 endif
 
 clean::
+ifneq (,$(wildcard config.msvc))
 	run_nmake.bat /f Makefile.msvc clean
+endif
 	$(RM) Makefile
 
 uninstall:

@@ -14,10 +14,10 @@ relPaths.sh
 /libxslt-1.1.28/config.h
 /libxslt-1.1.28/win32/config.msvc
 /libxslt-1.1.28/win32/Makefile
-/libxslt-1.1.28/win32/bin.msvc/
-/libxslt-1.1.28/win32/int.exslt.msvc/
-/libxslt-1.1.28/win32/int.exslta.msvc/
-/libxslt-1.1.28/win32/int.utils.msvc/
-/libxslt-1.1.28/win32/int.xslt.msvc/
-/libxslt-1.1.28/win32/int.xslta.msvc/
+/libxslt-1.1.28/win32/bin.msvc*/
+/libxslt-1.1.28/win32/int.exslt.msvc*/
+/libxslt-1.1.28/win32/int.exslta.msvc*/
+/libxslt-1.1.28/win32/int.utils.msvc*/
+/libxslt-1.1.28/win32/int.xslt.msvc*/
+/libxslt-1.1.28/win32/int.xslta.msvc*/
 .project

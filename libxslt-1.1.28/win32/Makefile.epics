@@ -21,7 +21,13 @@ ifdef T_A
 	run_nmake.bat /f Makefile.msvc install
 endif
 
-clean::
+ifeq ($(BASE_3_14),YES)
+clean:: myclean
+else
+clean: myclean
+endif
+
+myclean:
 ifneq (,$(wildcard config.msvc))
 	run_nmake.bat /f Makefile.msvc clean
 endif

@@ -5,6 +5,7 @@ include $(TOP)/../../../ISIS_CONFIG
 -include $(TOP)/../../../ISIS_CONFIG.$(EPICS_HOST_ARCH)
 
 # Local dependencies
+LIBICONV=$(SUPPORT)/libiconv/master
 LIBXML2=$(SUPPORT)/libxml2/master
 LIBXSLT=$(SUPPORT)/libxslt/master
 ZLIB=$(SUPPORT)/zlib/master

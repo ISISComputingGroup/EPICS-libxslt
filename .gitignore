@@ -7,7 +7,7 @@ O.*/
 /templates
 envPaths
 cdCommands
-dllPath.bat
+dllPath*.bat
 runIOC.bat
 runIOC.sh
 relPaths.sh
@@ -21,3 +21,4 @@ relPaths.sh
 /libxslt-1.1.28/win32/int.xslt.msvc*/
 /libxslt-1.1.28/win32/int.xslta.msvc*/
 .project
+NULL
